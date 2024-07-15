@@ -1,4 +1,117 @@
-h1{
-    color: red;
-    font-size: 50px;
+/* Main Structure */
+
+.main {
+    height: 90vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    align-items: stretch;
+}
+
+.grid-item {
+    
+    font-size: 30px;
+    text-align: center;
+}
+
+.side {
+    display: none;
+}
+
+/* Card */
+
+.card {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 100px;
+    height: 50%;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+.card-body {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.sneaker {
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    transform: rotate(-45deg) translate(-50%, -50%);
+    transition: all .7s ease-in-out
+}
+
+.sneaker:hover {
+    cursor: wait;
+    transform: rotate(360deg) translate(-50%, -50%);
+}
+
+.price {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    color: white;
+
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo {
+    color: white;
+    fill: white;
+    width: 100px;
+
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Fonts */
+
+.anton-sc-regular {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 350;
+    font-size: 200px;
+    font-style: normal;
+    color: white;
+}
+
+/* Media Query */
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .anton-sc-regular {
+        font-size: 400px;
+    }
+
+    .sneaker {
+        width: 600px;
+    }
+
+    .price {
+        font-size: 60px;
+    }
+
+    .grid-container {
+        column-gap: 50px;
+    }
+
+    .side {
+        display: block;
+    }
 }
